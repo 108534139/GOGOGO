@@ -126,5 +126,5 @@ body {
 
 .cute-btn:active {
   transform: translateY(3px);
-  box-shadow: 0 3px 0 #f2c94c, 0 3px 10px rgba(0,0,0,0.2);
-}
+  box-shadow: 0 3px 0 #ffd34e, 0 3px 10px rgba(0,0,0,0.2);
+} 
