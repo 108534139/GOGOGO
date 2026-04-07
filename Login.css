@@ -103,3 +103,28 @@ body {
     display: none;
   }
 }
+
+/* 可愛黃色果凍立體按鈕 */
+.cute-btn {
+  background: linear-gradient(145deg, #ffe066, #ffd43b);
+  border: none;
+  border-radius: 15px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #f2c94c, 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.cute-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 #f2c94c, 0 9px 15px rgba(0,0,0,0.2);
+  background: linear-gradient(145deg, #fff176, #ffe066);
+}
+
+.cute-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #f2c94c, 0 3px 10px rgba(0,0,0,0.2);
+}
