@@ -1,0 +1,105 @@
+/* --------------------------整頁背景-------------------------- */
+body {
+  background-color: #fff9db;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 外層置中 */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 卡片 */
+.login-card {
+  width: 70%;
+  height: 70vh;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: visible; /* 讓圓形可以超出卡片 */
+}
+
+/* --------------------------三個區塊-------------------------- */
+.user-select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 每個人 */
+.user-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* 圓形容器 */
+.circle-btn {
+  width: 90%; /* 控制圓形大小 */
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffd43b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: -30px; /* 圓形浮出卡片 */
+}
+
+/* 圖片填滿圓形 */
+.user-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* hover 效果 (整個圓形放大) */
+.circle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 名字 */
+.user-item p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* --------------------------手機版-------------------------- */
+@media (max-width: 768px) {
+  /* 三個改成直排並置中 */
+  .user-select-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
+    justify-content: center; /* 垂直置中，可視卡片高度調整 */
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* 每個人區塊寬度改為67%，置中 */
+  .user-item {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓圓形和文字置中 */
+  }
+
+  /* 圓形大小改為67% x 67%，不要浮出 */
+  .circle-btn {
+    width: 67%;
+    aspect-ratio: 1 / 1;
+    margin-top: 0;
+  }
+
+  /* 隱藏名字 */
+  .user-item p {
+    display: none;
+  }
+}
